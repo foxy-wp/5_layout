@@ -1,0 +1,307 @@
+.slider-SB {
+  background-image: url('../img/prostok_t_4_1101.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 640px;
+
+  &_body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_title {
+    @include title700(14px, 48px);
+    margin-inline: auto;
+    padding-top: 43px;
+    margin-bottom: -11px;
+  }
+
+
+  &_subtitle {
+    margin-inline: auto;
+    margin-bottom: 112px;
+    @include subtitle600;
+    color: white;
+
+    &::before {
+      @include nextblueline(77px, 102px);
+    }
+
+    span {
+      @include blueline(77px, 102px);
+    }
+  }
+}
+
+
+#pricing {
+
+  .slick-list {
+    margin: {
+      left: -15px;
+      right: -15px;
+    }
+  }
+
+  .slick-slide {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+// bootstrap break points for helper below
+$breakpoints: (
+        'sm': 576px,
+        'md': 768px,
+        'lg': 992px,
+        'xl': 1200px
+);
+
+// helper in navbar to show breakpoint size
+#breakpoint-helper {
+  &:after {
+    color: #fff;
+    text-transform: uppercase;
+    content: 'XS';
+    @each $size, $px in $breakpoints {
+      @media (min-width: $px) {
+        content: $size;
+      }
+    }
+  }
+}
+
+.slick-slider {
+  .slick-initialized {
+
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+
+}
+
+.slick-track {
+  display: flex;
+}
+
+//DOTS
+
+.slick-active button {
+  background-color: #666666;
+  width: 14px;
+  height: 14px;
+
+}
+
+.slick-active {
+  margin-top: 0;
+}
+
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 116px;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+    margin: 0 10px;
+
+    .slick-active {
+      margin-top: 0;
+    }
+
+    .slick-active button {
+      background-color: #666666;
+    }
+  }
+
+  li button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.0);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 0;
+
+    }
+
+  & .slick-active button {
+    width: 14px;
+    height: 14px;
+    border: #ffffff;
+    background-color: #ffffff;;
+  }
+}
+
+
+
+.slick_slider {
+  &-text {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #ffffff;
+    font-style: italic;
+    padding-right: 10px;
+  }
+
+  .logo-slider {
+    display: flex;
+    margin-top: 23px;
+
+    .card-title {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-top: 4px;
+
+      p {
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 700;
+      }
+    }
+  }
+
+
+}
+
+
+.price {
+  padding-bottom: 56px;
+
+  &_body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_title {
+    @include title700(14px, 47px);
+    margin-inline: auto;
+    padding-top: 41px;
+    margin-bottom: -11px;
+  }
+
+
+  &_subtitle {
+    margin-inline: auto;
+    margin-bottom: 95px;
+    @include subtitle600;
+    color: #1a1a1a;
+
+    &::before {
+      @include nextblueline(77px, 102px);
+    }
+
+    span {
+      @include blueline(77px, 102px);
+    }
+
+  }
+
+  .cards {
+    &-body:hover {
+      .cards_price, .cards_btn {
+        background-color: $primary;
+        color:#ffffff;
+        p{color:#ffffff;}
+              }
+      .cards_title{
+        color: $primary;
+      }
+    }
+
+    .slick-list {
+      margin-inline: -14px
+    }
+
+    .slick-slide {
+      margin: 0 14px;
+    }
+
+    &_btn {
+      padding-inline: 37px;
+      padding-block: 12px;
+      margin-top: 42px;
+      width: 160px;
+      height: 50px;
+      box-shadow: 0 0 3px 0 rgba(3, 3, 3, 0.1);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #008ed6;
+
+
+    }
+
+    &_title {
+      font-size: 24px;
+      line-height: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      padding-top: 27px;
+      padding-bottom: 22px;
+    }
+
+    &_price {
+      text-align: center;
+      padding: 51px 0 15px 0;
+
+      sup {
+        font-size: 28px;
+        vertical-align: middle;
+      }
+
+      p:first-child {
+        font-size: 60px;
+        line-height: 22px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+        color: #999999;
+      }
+    }
+
+    &_text {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      color: #999999;
+      text-align: center;
+      padding-top: 45px;
+      padding-bottom: 30px;
+      padding-inline: 34px;
+
+      span {
+        color: #008ed6;
+      }
+    }
+
+
+  }
+
+
+}
+

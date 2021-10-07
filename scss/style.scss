@@ -1,0 +1,91 @@
+$font-family-base: "Source Sans Pro", sans-serif;
+$primary: #008ed6;
+
+@mixin title700($fontS, $lineH) {
+  font-size: $fontS;
+  line-height: $lineH;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #008ed6;
+}
+
+@mixin subtitle600 {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #1a1a1a;
+  position: relative;
+}
+
+@mixin blueline($topH, $leftW) {
+  width: 20px;
+  height: 2px;
+  background-color: #008ed6;
+  position: absolute;
+  top: $topH;
+  left: $leftW;
+}
+
+@mixin nextblueline($topH,$leftW) {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #008ed6;
+  position: absolute;
+  top: $topH;
+  left: $leftW+22px;
+}
+
+@mixin maintext($fS,$lineH) {
+  font-size: $fS;
+  line-height: $lineH;
+  color: #999999;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "header";
+@import "introducing";
+@import "features";
+@import "about";
+@import "testimonials";
+@import "like";
+@import "pricing";
+@import "contact";
+@import "footer";
+@import "fonts.scss";
+
+$mgcolor: #14141a;
+$blueline: 163px;
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  padding-inline: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

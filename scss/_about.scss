@@ -1,0 +1,83 @@
+.pict-block {
+  margin-top: 56px;
+  padding-top: 60px;
+  border-top: 1px solid #ededed;
+
+  img {
+    margin-left: 20px;
+    margin-top: 4px;
+  }
+
+  &__title {
+    @include title700(14px, 48px);
+    margin-top: 38px;
+    margin-bottom: -10px;
+  }
+
+  &__subtitle {
+    @include subtitle600;
+
+    &::before {
+      @include nextblueline(74px, 0px);
+    }
+
+    span {
+      @include blueline(74px, 0px);
+    }
+  }
+
+  &_text {
+    @include maintext(18px, 26px);
+    max-width: 480px;
+    padding-top: 46px;
+    margin-bottom: 28px;
+    span{
+      padding-left: 5px;
+    }
+  }
+
+  .reference {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    p {
+      padding-left: 25px;
+      margin-bottom: 6px;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: normal;
+      color: #1b1b1b;
+    }
+
+    p:first-child::before {
+      content: url("../img/tiny_icons/cup_881.png");
+      position: absolute;
+      top: 3px;
+      left: 0;
+    }
+
+    p:nth-child(2)::before {
+      content: url("../img/tiny_icons/mouse_885.png");
+      position: absolute;
+      top: 38px;
+      left: 2px;
+    }
+
+    p:nth-child(3)::before {
+      content: url("../img/tiny_icons/energy_882.png");
+      position: absolute;
+      top: 75px;
+      left: 2px;
+    }
+
+    p:last-child::before {
+      content: url("../img/tiny_icons/speedometer_883.png");
+      position: absolute;
+      top: 108px;
+      left: 0;
+    }
+  }
+}
